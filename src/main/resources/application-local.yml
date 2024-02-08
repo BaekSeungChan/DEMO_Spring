@@ -19,3 +19,12 @@ spring:
         format_sql: true # SQL 쿼리의 포맷을 보기 좋게 출력합니다. 쿼리를 더 쉽게 읽을 수 있게 해줍니다.
     hibernate:
       ddl-auto: create-drop # 애플리케이션이 시작될 때 데이터베이스 스키마를 자동으로 생성하고, 애플리케이션이 종료될 때 스키마를 제거합니다. 개발 초기 단계에서 유용하게 사용할 수 있으나, 실제 운영 환경에서는 주의가 필요합니다.
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/h2/**/**.xml
+  type-handlers-package: com.qortmdcks.demo.mapper.typehandler
+  type-aliases-package: com.qortmdcks.demo.model
+  configuration:
+    map-underscore-to-camel-case: true
+    default-statement-timeout: 30
+    default-fetch-size: 100

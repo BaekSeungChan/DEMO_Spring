@@ -1,5 +1,6 @@
 package com.qortmdcks.demo.service;
 
+import com.qortmdcks.demo.mapper.PostMapper;
 import com.qortmdcks.demo.model.Post;
 import com.qortmdcks.demo.repository.PostRespository;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,11 @@ public class PostService {
 
     private final PostRespository postRespository;
 
+    private final PostMapper postMapper;
+
     public List<Post> postList() {
-        return postRespository.findAll();
+//        return postRespository.findAll(); // JPA 방식
+
+        return postMapper.listPost();
     }
 }
