@@ -1,7 +1,11 @@
+server:
+  port: 8080
+
 spring:
   datasource:
 #    jdbc:mariadb://localhost:3306/testdb
     url: ENC(Ak/tQwvwz/bhsxl8q1wnlL9sa3EU4L5InHm+VgDgcm80TF/2dS+MvJpOJtJVU3Nd)
+#    url: jdbc:mariadb://localhost:3306/testdb
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: ENC(yDurtNm8R3AIYuNUk4ntISZKLv2DygXy)
