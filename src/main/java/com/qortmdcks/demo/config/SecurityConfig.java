@@ -11,6 +11,8 @@ import org.springframework.security.config.annotation.web.configurers.HttpBasicC
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
@@ -26,7 +28,8 @@ public class SecurityConfig {
 //                .sessionManagement(sessionManagement -> sessionManagement   // Spring Security는 기본적으로 session을 쓴다. 그래서 생략해도 된다.
 //                        .sessionCreationPolicy(SessionCreationPolicy.ALWAYS))
                 .authenticationProvider(authenticationProvider)
-                .httpBasic(HttpBasicConfigurer::disable);
+//                .formLogin(withDefaults())
+                .httpBasic(withDefaults());
 
         return http.build();
     }
