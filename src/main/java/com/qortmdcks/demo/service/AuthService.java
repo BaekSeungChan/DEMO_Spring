@@ -24,10 +24,7 @@ public class AuthService {
         return user;
     }
 
-
     // authority : 회원가입, 인가
     // authentication : 로그인, 인증
     // auth
-
-
 }
