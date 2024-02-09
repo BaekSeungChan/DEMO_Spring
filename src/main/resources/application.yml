@@ -1,3 +1,15 @@
 spring:
+  application:
+    name: demo
   profiles:
-    active: local
+    active: dev
+
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
+
+#logging:
+#  level:
+#    org.hibernate.type.descriptor.sql: trace

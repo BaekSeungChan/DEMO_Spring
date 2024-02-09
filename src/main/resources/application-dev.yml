@@ -1,9 +1,10 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/testdb
+#    jdbc:mariadb://localhost:3306/testdb
+    url: ENC(Ak/tQwvwz/bhsxl8q1wnlL9sa3EU4L5InHm+VgDgcm80TF/2dS+MvJpOJtJVU3Nd)
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
-    password: "!Qortmdcks95"
+    password: ENC(yDurtNm8R3AIYuNUk4ntISZKLv2DygXy)
   jpa:
     database-platform: org.hibernate.dialect.MariaDBDialect
     properties:
@@ -12,3 +13,7 @@ spring:
         format_sql: true
     hibernate:
       ddl-auto: create-drop
+
+#logging:
+#  level:
+#    org.hibernate.type.descriptor.sql: trace
