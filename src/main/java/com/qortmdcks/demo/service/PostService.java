@@ -19,11 +19,15 @@ public class PostService {
 
     private final PostMapper postMapper;
 
-    public List<Post> postList(String title) {
+    public List<Post> postList() {
 //        return postRespository.findAll(); // JPA 방식
 //        return postMapper.listPost(); // Mybatis
 
 //        return postRespository.findByTitle(title);
-        return postRespository.findByTitleContains(title);
+
+//        return postRespository.findByTitleContains(title);
+
+        return postRespository.findAll();
+
     }
 }

@@ -23,14 +23,19 @@ public class PostController {
 //        this.postService = postService;
 //    }
 
+//    @GetMapping("/list")
+//    public List<Post> postList(@RequestParam String title){
+//        return postService.postList(title);
+//    }
+
     @GetMapping("/list")
-    public List<Post> postList(@RequestParam String title){
-        return postService.postList(title);
+    public List<Post> postList(){
+        return postService.postList();
     }
 
-    @GetMapping("/{postId}")
-    public Post postDetail(@PathVariable String postId){
-        return new Post(UUID.randomUUID(), "title1", "contents1",postId, LocalDateTime.now());
-    }
+//    @GetMapping("/{postId}")
+//    public Post postDetail(@PathVariable String postId){
+//        return new Post(UUID.randomUUID(), "title1", "contents1",postId, LocalDateTime.now());
+//    }
 
 }
